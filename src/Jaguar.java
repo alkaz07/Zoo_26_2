@@ -1,6 +1,5 @@
 public class Jaguar {
-   //добавил Ягуара
-    // внес примечания
-    // ghbv
-
+    public static void main(String[] args) {
+        System.out.println("Ягуар бегает быстрее всех!");
+    }
 }
