@@ -18,6 +18,11 @@ public class Rabbit {
         IO.println("Что хочет кролик? "+ rabbitOne.whatDoesTheRabbitWant());
         IO.println("Что еще хочет кролик? "+ rabbitOne.whatDoesTheRabbitWant());
         IO.println("А потом что хочет кролик? "+ rabbitOne.whatDoesTheRabbitWant());
+        IO.println("Как кролик говорит? "+ rabbitOne.getRabbitSays());
+    }
+
+    private String getRabbitSays() {
+        return ("Отстань, я занят!");
     }
 
     public Rabbit(String name, String weight, String height, String color) {
@@ -75,5 +80,6 @@ public class Rabbit {
     int number = random.nextInt(9);
     return (str[number]);
     }
+
 
 }
