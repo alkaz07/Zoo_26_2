@@ -1,5 +1,17 @@
 public class Cat {
     String name;
-    //ToDo:
-    // добавить еще свойств, методов, конструктор сделать и т.д.
+    String color;
+
+    public Cat(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
