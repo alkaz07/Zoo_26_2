@@ -57,9 +57,11 @@ public class Rabbit {
     }
 
     public String whatDoesTheRabbitWant() {
-    String[] str = {"ничего","хочет есть","хочет пить","хочет играть","хочет бегать","хочет играть","хочет спать"};
+    String[] str = {"ничего","хочет есть","хочет пить",
+                    "хочет играть","хочет бегать","хочет играть",
+                    "хочет спать","хочет морковку","хочет прыгать"};
     Random random = new Random();
-    int number = random.nextInt(7);
+    int number = random.nextInt(9);
     return (str[number]);
     }
 
