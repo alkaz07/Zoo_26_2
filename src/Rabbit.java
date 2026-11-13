@@ -1,13 +1,24 @@
-void main() {
+/* void main() {
     Rabbit rabbitOne = new Rabbit("Косой","5 кг","35 см","Белый");
     IO.println("Что хочет кролик? "+ rabbitOne.whatDoesTheRabbitWant());
     IO.println("Что еще хочет кролик? "+ rabbitOne.whatDoesTheRabbitWant());
     IO.println("А потом что хочет кролик? "+ rabbitOne.whatDoesTheRabbitWant());
 
 }
+*/
+
+import java.util.Random;
 
 public class Rabbit {
     String name, weight, height, color;
+
+    public static void main(String[] args) {
+        Rabbit rabbitOne = new Rabbit("Косой","5 кг","35 см","Белый");
+        IO.println("Как зовут кролика? "+ rabbitOne.getName());
+        IO.println("Что хочет кролик? "+ rabbitOne.whatDoesTheRabbitWant());
+        IO.println("Что еще хочет кролик? "+ rabbitOne.whatDoesTheRabbitWant());
+        IO.println("А потом что хочет кролик? "+ rabbitOne.whatDoesTheRabbitWant());
+    }
 
     public Rabbit(String name, String weight, String height, String color) {
         this.name = name;
@@ -57,9 +68,9 @@ public class Rabbit {
     }
 
     public String whatDoesTheRabbitWant() {
-    String[] str = {"ничего","хочет есть","хочет пить",
-                    "хочет играть","хочет бегать","хочет играть",
-                    "хочет спать","хочет морковку","хочет прыгать"};
+    String[] str = new String[]{"ничего", "хочет есть", "хочет пить",
+            "хочет играть", "хочет бегать", "хочет играть",
+            "хочет спать", "хочет морковку", "хочет прыгать"};
     Random random = new Random();
     int number = random.nextInt(9);
     return (str[number]);
