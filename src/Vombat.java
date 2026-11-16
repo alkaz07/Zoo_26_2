@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Vombat {
+
     static void main(String[] args) {
         Animal vombat = new Animal();
 
@@ -19,22 +20,22 @@ public class Vombat {
             System.out.println("точно??");
             answer = scanner.nextLine();
             if (answer.equalsIgnoreCase("да")) {
-                System.out.println("КУСЬ!");
-            }
-            else {
+                vombat.print();
+            } else {
                 System.out.println("Но он же такой миииииииленький");
             }
+        } else {
+            vombat.print();
         }
-        else {
-
-                System.out.println("КУСЬ!");
-            }
     }
 
     static class Animal {
         String areal, name, gender;
-        int legs, age ;
+        int legs, age;
         double height;
 
+        void print() {
+            System.out.println("КУСЬ!");
+        }
     }
 }
