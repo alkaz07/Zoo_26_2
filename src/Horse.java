@@ -1,4 +1,7 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Random;
+import java.util.Scanner;
 
 public class Horse {
     private String name;
@@ -15,7 +18,7 @@ public class Horse {
             "гнедая", "вороная", "рыжая", "серая", "белая", "буланая"
     };
     private static final String[] SIZES = {
-            "маленькая", "средняя", "большая"
+            "маленькая", "средняя", "крупная"
     };
     private static final String[] ACTIVITIES = {
             "бежит", "пасётся", "говорит игого", "спит"
@@ -41,26 +44,37 @@ public class Horse {
     public void performActivity() {
         switch (activity) {
             case "бежит":
-                System.out.println(name + " (" + color + ", " + size + ") бежит!");
+                System.out.println(color + ", " + size + " по кличке " + name + " бежит!");
                 break;
             case "пасётся":
-                System.out.println(name + " (" + color + ", " + size + ") пасётся на лугу.");
+                System.out.println(color + ", " + size + " по кличке " + name + " пасётся на лугу.");
                 break;
             case "говорит игого":
-                System.out.println(name + " (" + color + ", " + size + ") говорит: Иго-го!");
+                System.out.println(color + ", " + size + " по кличке " + name + " говорит: Иго-го!");
                 break;
             case "спит":
-                System.out.println(name + " (" + color + ", " + size + ") спит.");
+                System.out.println(color + ", " + size + " по кличке " + name + " спит.");
                 break;
             default:
-                System.out.println(name + " какает.");
+                System.out.println(color + ", " + size + " по кличке " + name + " резерв");
         }
     }
 
-    public String getName() { return name; }
-    public String getColor() { return color; }
-    public String getSize() { return size; }
-    public String getActivity() { return activity; }
+    public String getName() {
+        return name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public String getActivity() {
+        return activity;
+    }
 
     @Override
     public String toString() {
@@ -72,11 +86,13 @@ public class Horse {
                 '}';
     }
 
+
     // Точка входа — чтобы можно было запустить класс
     public static void main(String[] args) {
-        for (int i = 0; i < 3; i++) {
+        int getHorseCount = Integer.parseInt(IO.readln("Введите количество лошадок в табуне: "));
+        for (int i = 0; i < getHorseCount; i++) {
             Horse horse = new Horse(); // случайная лошадь
-            System.out.print((i+1) + "-ая лошадь по кличке ");
+            System.out.print((i + 1) + "-ая лошадь ");
             horse.performActivity();
             System.out.println("---");
         }
